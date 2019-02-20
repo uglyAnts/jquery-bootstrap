@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>软件体验中心</title>
+    <style type="text/css">
+    html,
+    body {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+    }
+    body {
+        font-family: "Microsoft YaHei";
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    .clearfix:after {
+        display: block;
+        content: '';
+        width: 100%;
+        clear: both;
+    }
+    .header {
+        height: 68px;
+        color: #fff;
+        background-color: #333;
+    }
+    .header-top {
+        height: 36px;
+        line-height: 36px;
+        font-size: 16px;
+    }
+    .header-nav {
+        height: 32px;
+    }
+    .header-nav .more-icon {
+        width: 80px;
+        height: 32px;
+        float: left;
+    }
+    .header-nav .nav-item {
+        position: relative;
+        float: left;
+        width: 135px;
+        height: 32px;
+        line-height: 32px;
+        margin: 0 12px;
+        padding: 0 8px;
+        font-size: 14px;
+        color: #b6b6b6;
+        cursor: pointer;
+        background-color: #484848;
+    }
+    .header-nav .nav-item:before,
+    .header-nav .nav-item:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-top: 32px solid transparent;
+    }
+    .header-nav .nav-item:before {
+        left: -12px;
+        border-right: 12px solid #484848;
+    }
+    .header-nav .nav-item:after {
+        right: -12px;
+        border-left: 12px solid #484848;
+    }
+    .header-nav .nav-item.active {
+        color: #fff;
+        cursor: default;
+        background-color: #858585;
+    }
+    .header-nav .nav-item.active:before {
+        border-right: 12px solid #858585;
+    }
+    .header-nav .nav-item.active:after {
+        border-left: 12px solid #858585;
+    }
+    .wrapper {
+        position: absolute;
+        top: 68px;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #f5f5f5;
+        overflow-y: auto;
+    }
+    .containter {
+        width: 1000px;
+        min-height: 100%;
+        margin: 0 auto;
+    }
+    .catalog {
+        margin-bottom: 10px;
+    }
+    .name {
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        color: #676767;
+        font-weight: bold;
+    }
+    .desc {
+        color: #999;
+        font-size: 12px;
+        word-wrap: break-word;
+        line-height: 16px;
+        max-height: 48px;
+    }
+    .app-list {
+        list-style: none;
+        margin-top: 24px;
+    }
+    .app-item {
+        float: left;
+        width: 134px;
+        height: 113px;
+        padding-top: 21px;
+        margin: 0 16px 16px 0;
+        text-align: center;
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 0px 1px 1px #ccc;
+        transition: box-shadow 0.2s linear, background 0.2s linear, -webkit-box-shadow 0.2s linear;
+    }
+    .app-item:hover {
+        opacity: .95;
+        background: #fff;
+        filter: alpha(opacity=95) progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=155, Color='#dfdfdf');
+        -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+    .app-icon {
+        display: block;
+        width: 72px;
+        height: 72px;
+        margin: 0 auto;
+    }
+    .app-name {
+        color: #666666;
+        line-height: 20px;
+        font-size: 14px;
+    }
+
+    ::-webkit-scrollbar {
+        width: 7px;
+        height: 7px;
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-top">软件体验中心</div>
+        <div class="header-nav">
+            <div class="more-icon"></div>
+            <div class="nav-item active">软件中心</div>
+            <div class="nav-item">测试中心</div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="containter">
+            <div class="catalog">
+                <div class="name">软件中心</div>
+                <div class="desc">
+                    <span class="cont">用于练手的菜单分类</span>
+                </div>
+                <ul class="app-list clearfix">
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                </ul>
+            </div>
+
+                        <div class="catalog">
+                <div class="name">软件中心</div>
+                <div class="desc">
+                    <span class="cont">用于练手的菜单分类</span>
+                </div>
+                <ul class="app-list clearfix">
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                </ul>
+            </div>
+
+                        <div class="catalog">
+                <div class="name">软件中心</div>
+                <div class="desc">
+                    <span class="cont">用于练手的菜单分类</span>
+                </div>
+                <ul class="app-list clearfix">
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                </ul>
+            </div>
+
+                        <div class="catalog">
+                <div class="name">软件中心</div>
+                <div class="desc">
+                    <span class="cont">用于练手的菜单分类</span>
+                </div>
+                <ul class="app-list clearfix">
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="catalog">
+                <div class="name">软件中心</div>
+                <div class="desc">
+                    <span class="cont">用于练手的菜单分类</span>
+                </div>
+                <ul class="app-list clearfix">
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                    <li class="app-item">
+                        <img class="app-icon" src="http://10.100.60.123:80/bic/fileService/v1/icon/menu/000257.png?date=1550573054302">
+                        <div class="app-name" title="外卖平台">外卖平台</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
